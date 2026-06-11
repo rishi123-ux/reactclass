@@ -18,11 +18,15 @@ function Products() {
 
   return (
     <>
+    <div style={{display:"flex",flexWrap:"wrap",justifyContent:"space-around",gap:'20px'}}   >
+
     {
         products.map((p)=>{
        return <Card image={p.image} title={p.title}  price={p.price}  />
         })
     }
+
+    </div>
     </>
   )
 }
