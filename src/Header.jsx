@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom"
-function Header() {
+function Header({setsearchquery}) {
 
   let togglemode=()=>{
   document.body.classList.toggle("change")
@@ -10,7 +10,7 @@ function Header() {
      <header style={{display:"flex",justifyContent:"space-evenly"}}   >
     <img  height={30} width={100}      src="https://zerodha.com/static/images/logo.svg" alt="logo" />
 
-    <input type="text" placeholder="search products..." />
+    <input  onChange={(e)=>{setsearchquery(e.target.value)}}  type="text" placeholder="search products..." />
 
     <nav style={{display:"flex",gap:"20px",alignItems:"center"}}>
   <Link to={'/register'}  > <a href="">Signup</a></Link>
