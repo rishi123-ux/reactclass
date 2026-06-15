@@ -5,7 +5,7 @@ function Products() {
    //fetch the product dat from the fakestore Api
     useEffect(() => {
       
-      fetch('https://fakestoreapi.com/products')
+      fetch('http://localhost:3000/products')
     .then(response => response.json())
     .then(data => setproducts(data));
     

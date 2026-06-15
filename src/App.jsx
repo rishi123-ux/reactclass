@@ -2,6 +2,11 @@
 import './App.css'
 import Header from './Header'
 import Products from './Products.jsx'
+import Register from './Register.jsx'
+import Login from '../Login.jsx'
+import Home from './Home.jsx'
+import About from './About.jsx'
+import {Routes,Route} from "react-router-dom"
 function App() {
   
  
@@ -9,17 +14,17 @@ function App() {
     <>
     <section style={{textAlign:"center"}}  >
    <Header/>
-    <img src="https://zerodha.com/static/images/landing.svg" alt="" />
-    <h2>Invest in everything</h2>
-    <p>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</p>
-    <button id='btn' >SignUp</button>
     </section>
 
-    <section>
-   <center> <h1>PRODUCTS</h1></center> 
-    
-    <Products/>
-    </section>
+<Routes>
+
+<Route path='/'  element={<Home/>}  />
+<Route path='/products'  element={<Products/>} />
+<Route path='/about'  element={<About/>}  />
+<Route path='/register' element={<Register/>}   />
+<Route path='/login'  element={<Login/>} />
+
+</Routes>
     </>
   )
 }
